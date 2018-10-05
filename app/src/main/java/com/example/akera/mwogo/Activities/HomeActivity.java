@@ -103,6 +103,8 @@ public class HomeActivity extends AppCompatActivity {
         pillTv = findViewById(R.id.tv_pill);
     }
 
+    //adding some initialization docs
+
     private void initFirebase() {
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
