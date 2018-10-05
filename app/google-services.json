@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "212412123183",
+    "firebase_url": "https://mwogo-30f83.firebaseio.com",
+    "project_id": "mwogo-30f83",
+    "storage_bucket": "mwogo-30f83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212412123183:android:822030b9e020122b",
+        "android_client_info": {
+          "package_name": "com.example.akera.mwogo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212412123183-dn90p71mjcs12vfm13t40n5a48pahpnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL2MJYLMhJOwErv-fBecilrhy6caoO9fc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
