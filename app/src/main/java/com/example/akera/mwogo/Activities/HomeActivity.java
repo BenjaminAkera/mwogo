@@ -27,7 +27,7 @@ public class HomeActivity extends AppCompatActivity {
     FirebaseUser currentUser;
 
     Button logOutButton,editProfileBtn;
-    TextView nameTv,emailTv,genderTv,dobTv,contactTv;
+    TextView nameTv,emailTv,genderTv,dobTv,contactTv, pillTv;
     DatabaseReference databaseReference;
     ProgressDialog progressDialog;
 
@@ -69,6 +69,7 @@ public class HomeActivity extends AppCompatActivity {
             contactTv.setText("Contact : "+value.getContact());
             dobTv.setText("Date of Birth : "+value.getDob());
             genderTv.setText("Gender : "+value.getGender());
+            pillTv.setText("Pill: "+value.getPill());
         }
     }
 
@@ -99,6 +100,7 @@ public class HomeActivity extends AppCompatActivity {
         contactTv = findViewById(R.id.tv_contact);
         dobTv = findViewById(R.id.tv_dob);
         genderTv = findViewById(R.id.tv_gender);
+        pillTv = findViewById(R.id.tv_pill);
     }
 
     private void initFirebase() {

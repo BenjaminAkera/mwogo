@@ -133,6 +133,48 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/input_outline"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp">
+
+
+       <TextView
+           android:paddingTop="15dp"
+           android:paddingLeft="15dp"
+           android:paddingRight="15dp"
+           android:paddingBottom="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="18sp"
+           android:text="Choose your Pill"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/pill_rgroup">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Red Pill"
+                android:id="@+id/pill_red"
+                />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blue Pill"
+                android:id="@+id/pill_blue"/>
+
+        </RadioGroup>
+
+        </LinearLayout>
+
         <Button
             android:id="@+id/btn_update_profile"
             android:layout_width="match_parent"

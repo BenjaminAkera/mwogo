@@ -1,24 +1,23 @@
 package com.example.akera.mwogo.UtilityClasses;
 
-/**
- * Created by Apoorva on 10-May-18.
- */
+
 
 public class pojoUser {
 
-    private String username, email, name, contact, dob, gender;
+    private String username, email, name, contact, dob, gender, pill;
 
     public pojoUser(){
 
     }
 
-    public pojoUser(String username, String email, String name, String contact, String dob, String gender) {
+    public pojoUser(String username, String email, String name, String contact, String dob, String gender, String pill) {
         this.username = username;
         this.email = email;
         this.name = name;
         this.contact = contact;
         this.dob = dob;
         this.gender = gender;
+        this.pill = pill;
     }
 
     public String getUsername() {
@@ -65,7 +64,12 @@ public class pojoUser {
         return gender;
     }
 
+    public String getPill() {return pill; }
+
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+    public void setPill(String pill){ this.pill = pill;}
+
 }

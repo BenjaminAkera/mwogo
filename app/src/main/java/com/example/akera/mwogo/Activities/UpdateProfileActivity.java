@@ -37,7 +37,9 @@ public class UpdateProfileActivity extends AppCompatActivity {
     private Button updateProfileBtn;
     private EditText nameEt,emailEt,dobEt,contactEt;
     private RadioGroup genderRadioGrp;
+    private RadioGroup pillRadioGrp;
     private RadioButton genderRadioBtn;
+    private RadioButton pillRadioBtn;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
     private Calendar myCalendar;
@@ -128,6 +130,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
         dobEt = findViewById(R.id.et_dob);
         contactEt = findViewById(R.id.et_contact);
         genderRadioGrp = findViewById(R.id.radio_grp_gender);
+        pillRadioGrp = findViewById(R.id.pill_rgroup);
     }
 
     private void addDatePicker() {
@@ -209,20 +212,26 @@ public class UpdateProfileActivity extends AppCompatActivity {
 
         String gender = genderRadioBtn.getText().toString();
 
+        int j = pillRadioGrp.getCheckedRadioButtonId();
+        pillRadioBtn = findViewById(j);
+
+        String pill = pillRadioBtn.getText().toString();
+
         pojoUser user = null;
 
-        if(isInputValid(name,email,contact,dob,gender)){
+        if(isInputValid(name,email,contact,dob,gender, pill)){
             user = new pojoUser();
             user.setName(name);
             user.setEmail(email);
             user.setDob(dob);
             user.setContact(contact);
             user.setGender(gender);
+            user.setPill(pill);
         }
         return user;
     }
 
-    private boolean isInputValid(String name, String email, String contact, String dob, String gender) {
+    private boolean isInputValid(String name, String email, String contact, String dob, String gender, String pill) {
 
         if(TextUtils.isEmpty(name)){
             Toast.makeText(this, "Name is Required", Toast.LENGTH_SHORT).show();
@@ -242,6 +251,12 @@ public class UpdateProfileActivity extends AppCompatActivity {
         }
         if (TextUtils.isEmpty(gender)) {
             Toast.makeText(this, "Gender is required", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+
+        if (TextUtils.isEmpty(pill)) {
+            Toast.makeText(this, "The matrix requires that you choose one pill", Toast.LENGTH_SHORT).show();
             return false;
         }
         if(!TextUtils.isDigitsOnly(contact) || contact.length()!=10){
