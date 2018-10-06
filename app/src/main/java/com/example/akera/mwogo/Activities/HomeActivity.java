@@ -61,7 +61,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-
+//function to set data to user Interface
     private void setDataToUI(pojoUser value) {
         if(value!=null){
             nameTv.setText("Name : "+value.getName());
@@ -153,3 +153,5 @@ public class HomeActivity extends AppCompatActivity {
         mAuth.addAuthStateListener(mAuthStateListener);
     }
 }
+
+//This is real
